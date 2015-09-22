@@ -19,7 +19,7 @@ class BookShelf implements Aggregate
     }
 
     /**
-     * get book at index
+     * get book in bookShelf at index
      *
      * @param int $index
      * @return Book
@@ -57,5 +57,15 @@ class BookShelf implements Aggregate
     public function iterator()
     {
         return new BookShelfIterator($this);
+    }
+
+    /**
+     * make Reverse Iterator
+     *
+     * @return Iterator
+     */
+    public function reverseIterator()
+    {
+        return new BookShelfReverseIterator($this);
     }
 }
