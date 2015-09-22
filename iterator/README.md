@@ -29,7 +29,7 @@ Iteratorを作り出すAPI(インターフェース)を定めている。
 
 ## ConcreteIteratorクラス
 ConcreteAggregateクラスのスキャンをするクラス。  
-スキャンするために必要な情報を持っている必要がある。
+スキャンするために必要な情報(ConcreteAggregate)を持っている必要がある。
 
 ## まとめ
 集合体の外にIteratorを置くことで実装とは切り離してことができる。  
