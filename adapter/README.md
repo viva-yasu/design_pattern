@@ -1,0 +1,3 @@
+# Adaper パターン
+- クラスによるAdapterパターン
+- インスタンスによるAdapterパターン
