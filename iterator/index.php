@@ -8,6 +8,7 @@ require 'classes/BookShelfIterator.php';
 
 use classes\Book;
 use classes\BookShelf;
+use classes\BookShelfIterator;
 
 $bookShelf = new BookShelf();
 $bookShelf->appendBook(new Book('perfect php'));
@@ -15,12 +16,11 @@ $bookShelf->appendBook(new Book('perfect ruby'));
 $bookShelf->appendBook(new Book('perfect java'));
 $bookShelf->appendBook(new Book('perfect c++'));
 $bookShelf->appendBook(new Book('perfect rails'));
+/** @var BookShelfIterator $iterator */
 $iterator = $bookShelf->iterator();
 
 while ($iterator->hasNext()) {
-    /**
-     * @var Book $book
-     */
+    /** @var Book $book */
     $book = $iterator->next();
     echo $book->getName() . "\n";
 }

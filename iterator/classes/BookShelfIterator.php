@@ -6,14 +6,10 @@ use interfaces\Iterator;
 
 class BookShelfIterator implements Iterator
 {
-    /**
-     * @var BookShelf
-     */
+    /** @var BookShelf $bookShelf*/
     private $bookShelf;
 
-    /**
-     * @var int
-     */
+    /** @var int $index */
     private $index;
 
     /**
@@ -27,6 +23,8 @@ class BookShelfIterator implements Iterator
     }
 
     /**
+     * check book collection at next index
+     *
      * @return bool
      */
     public function hasNext()
@@ -39,13 +37,13 @@ class BookShelfIterator implements Iterator
     }
 
     /**
+     * get book at current index
+     *
      * @return Object
      */
     public function next()
     {
-        /**
-         * @var Book $book
-         */
+        /** @var Book $book */
         $book = $this->bookShelf->getBookAt($this->index);
         $this->index++;
 

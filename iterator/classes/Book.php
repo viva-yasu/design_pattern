@@ -4,9 +4,7 @@ namespace classes;
 
 class Book
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $name;
 
     /**
@@ -19,6 +17,7 @@ class Book
     }
 
     /**
+     * getter name
      * @return string
      */
     public function getName()

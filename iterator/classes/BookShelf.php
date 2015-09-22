@@ -7,9 +7,7 @@ use interfaces\Iterator;
 
 class BookShelf implements Aggregate
 {
-    /**
-     * @var Array
-     */
+    /** @var array $books book collection */
     private $books;
 
     /**
@@ -32,7 +30,7 @@ class BookShelf implements Aggregate
     }
 
     /**
-     * add Book to book array
+     * add Book to book collection
      *
      * @param Book $book
      */
@@ -42,6 +40,8 @@ class BookShelf implements Aggregate
     }
 
     /**
+     * get book collection size
+     *
      * @return int
      */
     public function getLength()
@@ -50,6 +50,8 @@ class BookShelf implements Aggregate
     }
 
     /**
+     * make Book collection Iterator
+     *
      * @return Iterator
      */
     public function iterator()
